@@ -105,7 +105,7 @@ img {
 
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -1px;
 }
 .currentLink {
   color: var(--accent-color);
@@ -113,6 +113,7 @@ img {
 .link:hover,
 .link:focus {
   color: var(--accent-color);
+  transition: color 250ms var(--timing-function);
 }
 
 .header-contacts {
@@ -139,10 +140,10 @@ img {
 .icon-contacts {
   margin-right: 10px;
   fill: currentColor;
-  transition: fill 250ms var(--timing-function);
 }
 .icon-contacts:hover {
   fill: var(--accent-color);
+  transition: fill 250ms var(--timing-function);
 }
 /************************ ГЕРОЙ************************* */
 .overlay {
@@ -327,7 +328,7 @@ img {
 .thumb-label {
   width: 370px;
   height: 70px;
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: rgba(47, 48, 58, 0.8);
   position: absolute;
   display: flex;
   justify-content: center;
@@ -422,10 +423,12 @@ img {
 .socialnet-link:hover .icon-socialnet,
 .socialnet-link:focus .icon-socialnet {
   fill: var(--first-background-color);
+  transition: fill 250ms var(--timing-function);
 }
 .socialnet-link:hover,
 .socialnet-link:focus {
   background-color: var(--accent-color);
+  transition: background-color 250ms var(--timing-function);
 }
 .socialnet-item:not(:last-child) {
   margin-right: 10px;
@@ -466,6 +469,7 @@ img {
 .clients-link:focus {
   fill: var(--accent-color);
   border: 1px solid var(--accent-color);
+  transition: border 250ms var(--timing-function);
 }
 
 /* ****Фильтр по проэктам******************** */
@@ -501,7 +505,8 @@ img {
   background-color: var(--accent-color);
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.08),
     0 3px 1px rgba(0, 0, 0, 0.1);
-  transition: background-color 250ms var(--timing-function);
+  transition: background-color 250ms var(--timing-function), color 250ms var(--timing-function),
+    box-shadow 250ms var(--timing-function);
 }
 
 /********************************** Проэкты ******************************/
@@ -525,6 +530,7 @@ img {
 .projects-link:focus {
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0 4px 4px rgba(0, 0, 0, 0.06),
     0 1px 1px rgba(0, 0, 0, 0.12);
+  transition: box-shadow 250ms var(--timing-function);
 }
 .card-projects {
   padding: 20px 24px;
@@ -627,6 +633,7 @@ img {
 .footer-contacts:hover,
 .footer-contacts:focus {
   color: var(--accent-color);
+  transition: color 250ms var(--timing-function);
 }
 
 /* Присоединяйтесь */
